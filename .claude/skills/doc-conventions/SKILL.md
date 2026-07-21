@@ -22,9 +22,11 @@ description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 �
 | 취합 데이터·표 | `workspace/30-data/` |
 | 회의 아젠다·회의록 | `workspace/40-meetings/` |
 | 일정·WBS·태스크 보드 | `workspace/50-schedule/` |
-| IA·화면 정의서·유저 플로우 | `workspace/60-web-planning/` |
+| IA·화면 정의서·유저 플로우·웹 요구사항 | `workspace/60-web-planning/` |
 | 주간보고·요약본 | `workspace/70-reports/` |
 | 완료 프로젝트 보관 | `workspace/90-archive/` |
+
+- `workspace/00-inbox/`는 임시·미분류 자료 보관용 — 산출물 저장 금지, archive 에이전트가 정리 요청 시 적절한 폴더로 분류한다
 
 ## 3. front-matter (모든 산출물 필수)
 

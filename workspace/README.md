@@ -11,6 +11,6 @@
 | `30-data/` | 취합 데이터, 표 | data |
 | `40-meetings/` | 회의 아젠다·회의록 | meeting |
 | `50-schedule/` | 일정·WBS·마일스톤, `tasks.md` 태스크 보드 | schedule |
-| `60-web-planning/` | IA·요구사항·와이어프레임 명세 | web-planning |
+| `60-web-planning/` | IA·화면 정의서·유저 플로우·웹 요구사항 | web-planning |
 | `70-reports/` | 주간보고·요약본 | report |
 | `90-archive/` | 완료 프로젝트 보관, `INDEX.md` 색인 | archive |
