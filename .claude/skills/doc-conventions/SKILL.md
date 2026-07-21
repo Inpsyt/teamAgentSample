@@ -24,6 +24,7 @@ description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 �
 | 일정·WBS·태스크 보드 | `workspace/50-schedule/` |
 | IA·화면 정의서·유저 플로우·웹 요구사항 | `workspace/60-web-planning/` |
 | 주간보고·요약본 | `workspace/70-reports/` |
+| QA 리포트·리뷰 노트 | `workspace/80-qa/` |
 | 완료 프로젝트 보관 | `workspace/90-archive/` |
 
 - `workspace/00-inbox/`는 임시·미분류 자료 보관용 — 산출물 저장 금지, archive 에이전트가 정리 요청 시 적절한 폴더로 분류한다
@@ -33,7 +34,7 @@ description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 �
 ```yaml
 ---
 title: <문서 제목>
-agent: <작성 에이전트 이름 (research/benchmark/draft/data/meeting/schedule/web-planning/report/archive)>
+agent: <작성 에이전트 이름 (research/benchmark/draft/data/meeting/schedule/web-planning/report/archive/qa/review)>
 status: 초안 | 검토중 | 확정
 related:
   - <관련 문서 상대 경로 (없으면 빈 목록)>

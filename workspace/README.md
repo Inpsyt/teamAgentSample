@@ -13,4 +13,5 @@
 | `50-schedule/` | 일정·WBS·마일스톤, `tasks.md` 태스크 보드 | schedule |
 | `60-web-planning/` | IA·화면 정의서·유저 플로우·웹 요구사항 | web-planning |
 | `70-reports/` | 주간보고·요약본 | report |
+| `80-qa/` | QA 리포트·리뷰 노트 | qa, review |
 | `90-archive/` | 완료 프로젝트 보관, `INDEX.md` 색인 | archive |
