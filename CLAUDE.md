@@ -56,7 +56,15 @@ Dooray MCP(`dooray` 서버, `mcp__dooray__*` 도구)가 연결된 세션에서:
 
 - **게시 대상: qa 에이전트의 e2e QA 리포트만.** review의 리뷰 노트 등 그 외 검증·작성 산출물은 위키에 올리지 않고 로컬 workspace에만 둔다 (사용자가 명시 요청하면 예외).
 - 게시 시점: PM 형식 게이트 통과 후.
-- 게시 위치: 위키 `3813022935740753077`의 QA 페이지(`4381456940386943819`) **하위 페이지**로 `dooray_wiki_page_create` 호출 (`project`=위키 ID, `parent`=QA 페이지 ID).
+- 게시 위키: **E2E-QA결과 프로젝트** (projectId `<CLAUDE.local.md 참고>`, wikiId `<CLAUDE.local.md 참고>`), QA 루트 페이지 `<CLAUDE.local.md 참고>`.
+
+**프로젝트 폴더 게시 절차** (`dooray_wiki_page_create`의 `project`에는 위 ID 중 서버가 인식하는 값 사용):
+
+1. `dooray_wiki_pages`로 위키 페이지 목록을 조회해 QA 루트 페이지(`<CLAUDE.local.md 참고>`)의 **하위 페이지(프로젝트 폴더)** 목록을 얻는다
+2. 검토한 대상 URL의 프로젝트와 매칭되는 폴더를 선택한다 (예: `*.example.kr` → "예시프로젝트"). 매칭이 불확실하면 폴더 목록을 제시하고 사용자에게 확인받는다
+3. 매칭되는 폴더가 없으면 프로젝트명으로 **폴더 페이지를 새로 생성**한다 (`parent`=QA 루트 페이지, 본문은 대상 URL 한 줄)
+4. 선택/생성한 폴더 페이지를 `parent`로 QA 리포트를 하위 페이지로 게시한다
+
 - 제목 형식: `<대상> e2e QA 결과 (YYYY-MM-DD)`. 본문은 리포트 마크다운에서 front-matter를 제거하고 게시한다.
 - 게시 후 로컬 리포트는 그대로 유지한다 (로컬이 원본, 위키는 공유본).
 - `dooray_mail_send`는 되돌릴 수 없는 외부 발송이므로 어떤 경우에도 사용자 확인 없이 호출하지 않는다.
