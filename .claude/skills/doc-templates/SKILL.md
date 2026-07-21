@@ -110,7 +110,7 @@ description: 기획업무 산출물의 유형별 정형 템플릿 — 기획서,
 
 ## IA 문서 (web-planning용)
 
-```markdown
+````markdown
 # <서비스명> IA
 ## 사이트맵
 ```mermaid
@@ -119,7 +119,7 @@ graph TD
 ```
 ## 뎁스별 설명
 ## 유저 플로우 (주요 시나리오별 mermaid flowchart)
-```
+````
 
 ## 주간보고 (report용)
 
