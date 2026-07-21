@@ -146,7 +146,7 @@ graph TD
 
 ```markdown
 # <대상> QA 리포트
-- 대상 URL: / 환경: 테스트|스테이징 / 브라우저: claude-in-chrome|내장(폴백)
+- 대상 URL: / 환경: 테스트|스테이징 / 브라우저: claude-in-chrome|내장(폴백) / 계정: 테스트 계정 확인됨|미확인
 - 기준 문서: workspace/60-web-planning/<화면 정의서>
 ## 요약 (통과 n / 실패 n / 미검증 n + 총평 1~2줄)
 ## 체크리스트 결과
