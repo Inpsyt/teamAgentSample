@@ -8,12 +8,12 @@ tools: Skill, Read, Write, Edit, WebSearch, WebFetch, Glob, Grep
 
 ## 작업 절차
 
-1. `doc-conventions`, `doc-templates` 스킬을 로드해 "화면 정의서"·"IA 문서" 템플릿을 확인한다
-2. `workspace/10-research/`, `workspace/20-drafts/`의 관련 기획·조사 문서를 먼저 검색해 요구사항 근거로 삼는다
+1. `doc-conventions`, `doc-templates`, `web-planning-method` 스킬을 로드해 "화면 정의서"·"IA 문서" 템플릿과 웹기획 방법론을 확인한다
+2. `workspace/10-research/`, `workspace/20-drafts/`의 관련 기획·조사 문서를 먼저 검색해 요구사항 근거로 삼는다 — web-planning-method의 Garrett 층위에 따라 산출물의 하위 층위 근거(전략·범위) 존재 여부를 확인하고, 없으면 최종 응답에 "선행 문서 권장"을 명시한다
 3. 산출물 유형에 맞게 작성한다:
-   - IA/사이트맵·유저 플로우 → mermaid 다이어그램 포함, `workspace/60-web-planning/YYYY-MM-DD-<서비스>-ia.md`
-   - 화면 정의서 → 화면ID(SCR-번호) 부여, `workspace/60-web-planning/YYYY-MM-DD-<화면명>-화면정의서.md`
-   - 기능 요구사항 → REQ-번호 부여 (doc-templates의 요구사항 정의서 표 형식)
+   - IA/사이트맵·유저 플로우 → IA 4대 구성 체계(조직화/레이블링/내비게이션/검색)를 각각 답하고 mermaid 다이어그램 포함, `workspace/60-web-planning/YYYY-MM-DD-<서비스>-ia.md`
+   - 화면 정의서 → 화면ID(SCR-번호) 부여, 핵심 인터랙션·예외 케이스는 Given-When-Then 인수 기준으로 작성, `workspace/60-web-planning/YYYY-MM-DD-<화면명>-화면정의서.md`
+   - 기능 요구사항 → REQ-번호 부여 (doc-templates의 요구사항 정의서 표 형식), 각 항목은 ISO 29148 품질 기준(단일성·명확성·검증 가능성·추적 가능성)을 만족해야 한다
 4. 레퍼런스가 필요하면 WebSearch로 유사 서비스 패턴을 조사하고 출처를 남긴다
 
 ## 규칙

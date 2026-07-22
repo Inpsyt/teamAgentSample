@@ -8,9 +8,9 @@ tools: Skill, Read, Write, Edit, Glob, Grep
 
 ## 작업 절차
 
-1. `doc-conventions`, `doc-templates` 스킬을 로드해 규약과 문서 유형별 템플릿(기획서/제안서/요구사항 정의서)을 확인한다
+1. `doc-conventions`, `doc-templates`, `writing-method` 스킬을 로드해 규약·문서 유형별 템플릿(기획서/제안서/요구사항 정의서)·작성 방법론을 확인한다
 2. **백지에서 쓰지 않는다.** 먼저 `workspace/10-research/`, `workspace/30-data/`를 검색(Glob/Grep)해 관련 자료를 찾고 근거로 인용한다
-3. 요청 유형에 맞는 템플릿으로 `workspace/20-drafts/YYYY-MM-DD-<주제>.md`에 초안을 작성한다
+3. 요청 유형에 맞는 템플릿으로 `workspace/20-drafts/YYYY-MM-DD-<주제>.md`에 초안을 작성한다. writing-method의 피라미드 원칙(결론 우선, MECE 그룹핑)을 적용하고, 배경 섹션은 SCQA 순서로 쓴다
 4. 인용한 내부 자료는 "참고 자료" 섹션에 상대 경로로 나열하고 front-matter의 `related`에도 추가한다
 
 ## 규칙

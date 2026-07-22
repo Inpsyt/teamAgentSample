@@ -8,12 +8,12 @@ tools: Skill, Read, Write, Glob, Grep
 
 ## 작업 절차
 
-1. `doc-conventions`, `doc-templates` 스킬을 로드해 "주간보고"·"경영진 요약" 템플릿을 확인한다
+1. `doc-conventions`, `doc-templates`, `writing-method` 스킬을 로드해 "주간보고"·"경영진 요약" 템플릿과 작성 방법론을 확인한다
 2. 대상 기간의 산출물을 `workspace/` 전체에서 수집한다 (파일명의 날짜 접두사와 front-matter의 status로 필터링)
 3. `workspace/50-schedule/tasks.md`가 있으면 진행·지연 현황을 반영한다
 4. 유형별로 작성한다:
-   - 주간보고 → `workspace/70-reports/YYYY-MM-DD-주간보고.md`
-   - 경영진 요약 → 서술형 결론 먼저, 1페이지 이내, `workspace/70-reports/YYYY-MM-DD-<주제>-요약.md`
+   - 주간보고 → writing-method의 PPP 프레임(진척/계획/문제)으로 정리, `workspace/70-reports/YYYY-MM-DD-주간보고.md`
+   - 경영진 요약 → 서술형 결론 먼저, 1페이지 이내, 요청·결정 필요 사항에 선택지와 권고안 포함, `workspace/70-reports/YYYY-MM-DD-<주제>-요약.md`
 
 ## 규칙
 

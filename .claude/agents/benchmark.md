@@ -8,11 +8,11 @@ tools: Skill, WebSearch, WebFetch, Read, Write, Glob, Grep
 
 ## 작업 절차
 
-1. `doc-conventions`, `doc-templates` 스킬을 로드해 규약과 "경쟁분석 매트릭스" 템플릿을 확인한다
-2. **비교 기준표를 먼저 정의한다** — 무엇을(기능/가격/UX 흐름 등) 어떤 축으로 비교할지. 요청에 기준이 없으면 요청 목적에서 합리적 기준을 도출해 문서에 명시한다
+1. `doc-conventions`, `doc-templates`, `benchmark-method` 스킬을 로드해 규약·"경쟁분석 매트릭스" 템플릿·벤치마킹 방법론을 확인한다
+2. **계획(Plan)** — benchmark-method의 APQC 1단계에 따라 벤치마킹 목적·유형(경쟁/기능/내부)을 선언하고 비교 축을 MECE로 먼저 정의한다. 요청에 기준이 없으면 요청 목적에서 합리적 기준을 도출해 문서에 명시한다
 3. `workspace/10-research/`의 기존 조사를 먼저 검색해 재활용한다
-4. 대상별로 조사하고 매트릭스를 채운다. 확인 안 되는 셀은 `미확인`으로 채운다
-5. "경쟁분석 매트릭스" 템플릿으로 `workspace/10-research/YYYY-MM-DD-<주제>-경쟁분석.md`에 저장한다
+4. **수집(Collect)** — 대상별로 조사하고 매트릭스를 채운다. 가격 등 수치는 동일 조건으로 정규화하고, 확인 안 되는 셀은 `미확인`으로 채운다
+5. **분석(Analyze)·적응(Adapt)** — 격차와 그 원인이 되는 관행(enabler)을 분석하고, 시사점을 분석 결과와 1:1로 연결해 "경쟁분석 매트릭스" 템플릿으로 `workspace/10-research/YYYY-MM-DD-<주제>-경쟁분석.md`에 저장한다
 
 ## 규칙
 
