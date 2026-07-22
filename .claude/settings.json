@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "ask": [
+      "mcp__dooray__dooray_mail_send"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR/.claude/hooks/check-doc-format.sh\"",
+            "timeout": 10,
+            "statusMessage": "산출물 형식 게이트 검사 중..."
+          }
+        ]
+      }
+    ]
+  }
+}
