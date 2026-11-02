@@ -1,6 +1,6 @@
 ---
 name: doc-conventions
-description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 위치, front-matter, 출처 표기, 한국어 작성 원칙. 모든 팀 에이전트가 산출물 작성 전에 로드한다.
+description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 위치, front-matter, 출처 표기, 한국어 작성 원칙. 모든 작업자(범용 subagent·review·qa)가 산출물 작성 전에 로드한다 — 작업자 공통 규칙 포함.
 ---
 
 # 문서 규약 (doc-conventions)
@@ -27,14 +27,14 @@ description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 �
 | QA 리포트·리뷰 노트 | `workspace/80-qa/` |
 | 완료 프로젝트 보관 | `workspace/90-archive/` |
 
-- `workspace/00-inbox/`는 임시 메모·미분류 자료 보관용 — **명명 규칙·front-matter 없이 저장 가능**(형식 검사 제외). 정식 산출물은 여기 두지 않으며, archive 에이전트가 정리 요청 시 적절한 폴더로 분류한다
+- `workspace/00-inbox/`는 임시 메모·미분류 자료 보관용 — **명명 규칙·front-matter 없이 저장 가능**(형식 검사 제외). 정식 산출물은 여기 두지 않으며, archive 작업자가 정리 요청 시 적절한 폴더로 분류한다
 
 ## 3. front-matter (모든 산출물 필수)
 
 ```yaml
 ---
 title: <문서 제목>
-agent: <작성 에이전트 이름 (research/benchmark/draft/data/meeting/schedule/web-planning/report/archive/qa/review)>
+agent: <업무 유형 (research/benchmark/draft/data/meeting/schedule/web-planning/report/archive/qa/review)>
 status: 초안 | 검토중 | 확정
 related:
   - <관련 문서 상대 경로 (없으면 빈 목록)>
@@ -66,3 +66,14 @@ related:
 - 괄호 중첩 금지 — 괄호 안 괄호를 쓰지 않고, 한 문장에 괄호는 1개까지. 부연이 길면 별도 문장으로 뺀다.
 - 표 셀은 구절 단위 — 2문장 이상이 필요하면 표 대신 소제목+불릿을 쓴다. 재현 절차·상세 근거는 표 아래 본문에 둔다.
 - **볼드는 섹션당 최대 2회** — 결론에만 쓴다.
+
+## 7. 작업자 공통 규칙
+
+PM이 범용 subagent에 업무 유형과 스킬을 지정해 위임한다. 작업자는 업무 유형과 무관하게 아래를 지킨다.
+
+- 위임 프롬프트에 지정된 스킬을 **작업 시작 전에 Skill 도구로 로드**하고, 해당 스킬의 "작업 절차"를 따른다
+- 쓰기는 `workspace/` 아래 지정 폴더에만 한다. 프로젝트 설정(`.claude/`, `CLAUDE.md`, `README.md`)은 수정하지 않는다
+- 파일을 삭제하지 않는다 (archive도 이동만)
+- 다른 subagent를 호출하지 않는다. 후속 작업이 필요하면 최종 응답에 제안만 남긴다 (PM이 다음 위임을 만든다)
+- 검색 실패·자료 부족이어도 부분 결과를 저장하고, 남은 질문을 "미확인·추가 조사 필요 항목"에 기록한다
+- 최종 응답에는 저장한 파일 경로와 3줄 요약을 반환한다

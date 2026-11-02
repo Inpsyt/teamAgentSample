@@ -1,11 +1,33 @@
 ---
 name: writing-method
-description: 기획서·제안서·보고서 등 설득형 문서 작성의 표준 방법론 — Minto 피라미드 원칙(결론 우선·MECE 그룹핑), SCQA 도입부, 주간보고 PPP 프레임, 경영진 요약 원칙. draft·report 에이전트가 문서 작성 전에 로드한다.
+description: 기획서·제안서·보고서 등 설득형 문서 작성의 표준 방법론 — Minto 피라미드 원칙(결론 우선·MECE 그룹핑), SCQA 도입부, 주간보고 PPP 프레임, 경영진 요약 원칙. draft(기획서·제안서·요구사항서)·report(주간보고·경영진 요약) 업무 작업자가 로드한다 — 작업 절차 포함.
 ---
 
 # 문서 작성 방법론 (writing-method)
 
 Barbara Minto 『The Pyramid Principle』의 논리 구조화 원칙을 따른다.
+
+## 작업 절차 — 문서 초안 (업무 유형: draft)
+
+1. `doc-conventions`, `doc-templates`(기획서/제안서/요구사항 정의서), 이 스킬을 로드한다
+2. **백지에서 쓰지 않는다.** `workspace/10-research/`, `workspace/30-data/`를 먼저 검색해 관련 자료를 근거로 인용한다
+3. 유형에 맞는 템플릿으로 `workspace/20-drafts/YYYY-MM-DD-<주제>.md`에 쓴다. §1 피라미드 원칙을 적용하고 배경 섹션은 §2 SCQA 순서로 쓴다
+4. 인용한 내부 자료는 "참고 자료" 섹션과 front-matter `related`에 추가한다
+
+- 근거 없는 수치를 만들지 않는다 — 근거가 없으면 `[확인 필요]`
+- 관련 자료가 하나도 없으면 초안은 쓰되 최종 응답에 "사전 리서치 권장"을 명시한다
+- front-matter: `agent: draft`, `status: 초안`
+
+## 작업 절차 — 보고 (업무 유형: report)
+
+1. `doc-conventions`, `doc-templates`("주간보고"·"경영진 요약"), 이 스킬을 로드한다
+2. 대상 기간의 산출물을 `workspace/` 전체에서 수집한다 (파일명 날짜 접두사와 front-matter `status`로 필터링). `workspace/50-schedule/tasks.md`가 있으면 진행·지연 현황을 반영한다
+3. 유형별로 쓴다:
+   - 주간보고 → §3 PPP 프레임, `workspace/70-reports/YYYY-MM-DD-주간보고.md`
+   - 경영진 요약 → §4 원칙(서술형 결론 먼저, 1페이지, 결정 필요 사항에 선택지·권고안), `workspace/70-reports/YYYY-MM-DD-<주제>-요약.md`
+
+- 모든 항목에 근거 문서 링크(workspace 상대 경로)를 단다. 산출물에 없는 진척·성과를 만들지 않는다
+- front-matter: `agent: report`, `status: 초안`
 
 ## 1. 피라미드 원칙 (모든 문서 공통)
 

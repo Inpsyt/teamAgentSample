@@ -1,9 +1,22 @@
 ---
 name: web-planning-method
-description: 웹기획 산출물(IA·화면 정의서·기능 요구사항·유저 플로우)의 표준 방법론 — Garrett UX 5단계 층위, IA 4대 구성 체계(Rosenfeld·Morville), ISO/IEC/IEEE 29148 요구사항 품질 기준, Given-When-Then 인수 기준. web-planning 에이전트가 작성 전에 로드한다.
+description: 웹기획 산출물(IA·화면 정의서·기능 요구사항·유저 플로우)의 표준 방법론 — Garrett UX 5단계 층위, IA 4대 구성 체계(Rosenfeld·Morville), ISO/IEC/IEEE 29148 요구사항 품질 기준, Given-When-Then 인수 기준. web-planning 업무(IA·화면 정의서·유저 플로우) 작업자가 로드한다 — 작업 절차 포함.
 ---
 
 # 웹기획 방법론 (web-planning-method)
+
+## 작업 절차 (업무 유형: web-planning)
+
+1. `doc-conventions`, `doc-templates`("화면 정의서"·"IA 문서"·"요구사항 정의서"), 이 스킬을 로드한다
+2. `workspace/10-research/`, `workspace/20-drafts/`의 관련 문서를 먼저 검색해 요구사항 근거로 삼는다 — §1 Garrett 층위의 하위 층위 근거(전략·범위)가 없으면 최종 응답에 "선행 문서 권장"을 명시한다
+3. 유형별로 쓴다:
+   - IA/사이트맵·유저 플로우 → §2 4대 구성 체계를 각각 답하고 mermaid 포함, `workspace/60-web-planning/YYYY-MM-DD-<서비스>-ia.md`
+   - 화면 정의서 → 화면ID(SCR-번호), 핵심 인터랙션·예외 케이스는 §4 Given-When-Then, `workspace/60-web-planning/YYYY-MM-DD-<화면명>-화면정의서.md`
+   - 기능 요구사항 → REQ-번호, 각 항목은 §3 품질 기준 충족
+4. 레퍼런스가 필요하면 WebSearch로 유사 서비스 패턴을 조사하고 출처를 남긴다
+
+- 화면 정의서의 예외 케이스(빈 상태/오류/로딩/권한 없음) 섹션을 반드시 채우고, SCR과 REQ를 상호 참조한다
+- front-matter: `agent: web-planning`, `status: 초안`
 
 ## 1. Garrett UX 5단계 층위 — 산출물의 위치 확인
 
