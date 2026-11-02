@@ -27,7 +27,7 @@ description: 기획업무 산출물의 문서 규약 — 명명 규칙, 저장 �
 | QA 리포트·리뷰 노트 | `workspace/80-qa/` |
 | 완료 프로젝트 보관 | `workspace/90-archive/` |
 
-- `workspace/00-inbox/`는 임시·미분류 자료 보관용 — 산출물 저장 금지, archive 에이전트가 정리 요청 시 적절한 폴더로 분류한다
+- `workspace/00-inbox/`는 임시 메모·미분류 자료 보관용 — **명명 규칙·front-matter 없이 저장 가능**(형식 검사 제외). 정식 산출물은 여기 두지 않으며, archive 에이전트가 정리 요청 시 적절한 폴더로 분류한다
 
 ## 3. front-matter (모든 산출물 필수)
 
@@ -40,6 +40,8 @@ related:
   - <관련 문서 상대 경로 (없으면 빈 목록)>
 ---
 ```
+
+- 선택 키: `mode: 간단` — research 간단 조사 노트에만 붙인다(research-method §0). PM은 이 키로 review 생략 등급을 판별한다
 
 ## 4. 출처 표기 (각주형)
 

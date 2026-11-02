@@ -1,2 +1,8 @@
 .DS_Store
 .superpowers/
+
+# 사내 정보 — 로컬에만 보관
+CLAUDE.local.md
+workspace/**/*.md
+!workspace/README.md
+docs/*.md

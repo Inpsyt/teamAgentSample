@@ -5,7 +5,7 @@
 
 | 폴더 | 용도 | 담당 에이전트 |
 |---|---|---|
-| `00-inbox/` | 임시·미분류 자료 | (archive가 정리) |
+| `00-inbox/` | 임시 메모·미분류 자료 (형식 자유) | (archive가 정리) |
 | `10-research/` | 리서치·벤치마킹 보고서 | research, benchmark |
 | `20-drafts/` | 기획서·제안서 초안 | draft |
 | `30-data/` | 취합 데이터, 표 | data |
